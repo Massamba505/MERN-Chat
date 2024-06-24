@@ -1,0 +1,74 @@
+.Sidebar{
+    padding: 1em 0.5em 0px 1em;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100%;
+    width: 22em;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    gap: 10px;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    margin-right: 0.7em;
+}
+.search input{
+    height: 1.5em;
+    flex: 1;
+}
+
+.convos{
+    overflow-y: auto;
+    margin: 0.9em 0px;
+    flex: 1;
+    text-shadow: black 2px 2px 5px;
+    transition: transform 0.5s;
+    padding: 0.2em 0.4em 0.2em 0;
+}
+.convo:hover{
+    background-color: rgb(14, 104, 201);
+    border-radius:1em ;
+    box-shadow: black 5px 5px 5px;
+    cursor: pointer;
+}
+.selected{
+    border-radius:1em ;
+    background-color: rgb(28, 133, 244);
+    box-shadow: black 3px 3px 2px;
+}
+
+.Sidebar input{
+    width: 15em;
+    transition: transform 0.5s;
+    box-shadow: black 5px 5px 5px;
+}
+
+.convo{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    padding: 0.5em 10px;
+}
+.logout{
+    position: relative;
+}
+.Sidebar button{
+    box-shadow: black 2px 2px 0px;
+    transition: transform 0.5s;
+}
+.logout button{
+    position: relative;
+    left: -0.7em;
+    bottom: 0.7em;
+}
+.logout button:hover,.Sidebar button:hover{
+    transform: scale(1.01);
+    box-shadow: black 5px 5px 5px;
+}

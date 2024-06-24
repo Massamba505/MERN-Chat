@@ -5,7 +5,6 @@ const genrateTokenAndSetCookie = require("../utils/generateToken");
 const login = async(req,res) =>{
     try {
         const {username,password} = req.body;
-
         const findUser = await User.findOne({username});
 
         const isPasswordCorrect = await bcrypt.compare(password,findUser?.password || "");
@@ -18,7 +17,7 @@ const login = async(req,res) =>{
         res.status(201).json({
             _id:findUser._id,
             fullname:findUser.fullname,
-            username:findUser.profilePic,
+            username:findUser.username,
             profilePic:findUser.profilePic
         });
         
@@ -63,7 +62,7 @@ const signup = async (req,res) =>{
             res.status(201).json({
                 _id:newUser._id,
                 fullname:newUser.fullname,
-                username:newUser.profilePic,
+                username:newUser.username,
                 profilePic:newUser.profilePic
             });
         }

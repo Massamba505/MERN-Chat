@@ -47,6 +47,7 @@ const getMessage = async(req,res)=>{
         }).populate("messages"); // poplulate gives you every message as a message object not reference _id
         
         if(!convosation){
+            console.log("===============no convos....");
             return res.status(200).json([]);
         }
 
@@ -54,7 +55,7 @@ const getMessage = async(req,res)=>{
         
         res.status(200).json(messages);
     } catch (error) {
-        console.log("error in send message controller", error.message);
+        console.log("error in get message controller", error.message);
         res.status(500).json({error:"Internal server error"});
     }
 }
